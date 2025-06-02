@@ -55,16 +55,17 @@ django mongoengine
 ### 🟦 Node.js + PostgreSQL  
 body-parser ejs express nodemon pg
 
-###
---- 🟩 Node.js + MongoDB 
+### 🟩 Node.js + MongoDB 
 body-parser ejs express method-override mongoose nodemon
+
+--- 
 
 🔍 **Validaciones:**
 - `nombre` y `descripción`: solo letras, longitud mínima
 - `stock`: número entero positivo
 - JS en el frontend + validaciones en backend
 
-
+--- 
 ###🚀 Cómo ejecutar cada proyecto
 ###🟩 Node.js + MongoDB
 cd node_mongodb
