@@ -97,18 +97,18 @@ npm install
 node server.js
 
 ###🟦 Node.js + PostgreSQL
-cd node_postgresql
-npm install
-node index.js
+-cd node_postgresql
+-npm install
+-node index.js
 
 ###🔵 Django + PostgreSQL
-cd django_postgresql
-pip install -r requirements.txt
-python manage.py migrate
-python manage.py runserver
+-cd django_postgresql
+-pip install -r requirements.txt
+-python manage.py migrate
+-python manage.py runserver
 
 ###🟢 Django + MongoDB
-cd django_mongodb
-pip install -r requirements.txt
-Asegúrate de configurar mongoengine en settings.py
-python manage.py runserver
+-cd django_mongodb
+-pip install -r requirements.txt
+-Asegúrate de configurar mongoengine en settings.py
+-python manage.py runserver
