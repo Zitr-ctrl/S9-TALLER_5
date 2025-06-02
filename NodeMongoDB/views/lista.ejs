@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Productos</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-6">
+  <div class="max-w-4xl mx-auto bg-white p-6 rounded shadow">
+    <h1 class="text-3xl font-bold mb-4 text-center">Lista de Productos</h1>
+
+    <div class="flex justify-end mb-4">
+      <a href="/crear" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded">Crear nuevo producto</a>
+    </div>
+
+    <table class="min-w-full table-auto border border-gray-300 text-center">
+      <thead class="bg-gray-200">
+        <tr>
+          <th class="px-4 py-2 border">Nombre</th>
+          <th class="px-4 py-2 border">Descripción</th>
+          <th class="px-4 py-2 border">Stock</th>
+          <th class="px-4 py-2 border">Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% productos.forEach(p => { %>
+          <tr class="border-t hover:bg-gray-50">
+            <td class="px-4 py-2 border"><%= p.nombre %></td>
+            <td class="px-4 py-2 border"><%= p.descripcion %></td>
+            <td class="px-4 py-2 border"><%= p.stock %></td>
+            <td class="px-4 py-2 border">
+              <div class="flex gap-2 justify-center">
+                <a href="/editar/<%= p._id %>" class="text-blue-600 hover:underline">Editar</a>
+                <button onclick="eliminarProducto('<%= p._id %>')" class="text-red-600 hover:underline">Eliminar</button>
+              </div>
+            </td>
+          </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  </div>
+
+  <script>
+    async function eliminarProducto(id) {
+      const confirmar = confirm("¿Estás seguro de eliminar este producto?");
+      if (!confirmar) return;
+
+      try {
+        const respuesta = await fetch(`/eliminar/${id}`, {
+          method: 'DELETE'
+        });
+
+        const data = await respuesta.json();
+
+        if (respuesta.ok) {
+          alert(data.mensaje);
+          location.reload(); // Recarga la página después de eliminar
+        } else {
+          alert(data.mensaje || 'Error al eliminar');
+        }
+      } catch (error) {
+        alert('Error al conectar con el servidor.');
+      }
+    }
+  </script>
+</body>
+</html>

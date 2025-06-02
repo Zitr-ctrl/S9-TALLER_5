@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Lista de Productos</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+  <div class="min-h-screen flex items-center justify-center">
+    <div class="bg-white p-8 rounded shadow-lg w-full max-w-4xl">
+
+      <h1 class="text-3xl font-bold mb-6 text-center">Lista de Productos</h1>
+
+      <div class="mb-4 text-center">
+        <a href="{% url 'crear_producto' %}" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Crear nuevo producto</a>
+      </div>
+
+      <div class="overflow-x-auto">
+        <table class="min-w-full table-auto border text-center">
+          <thead class="bg-gray-200">
+            <tr>
+              <th class="px-4 py-2">Nombre</th>
+              <th class="px-4 py-2">Descripción</th>
+              <th class="px-4 py-2">Stock</th>
+              <th class="px-4 py-2">Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for p in productos %}
+              <tr class="border-t hover:bg-gray-50">
+                <td class="px-4 py-2">{{ p.nombre }}</td>
+                <td class="px-4 py-2">{{ p.descripcion }}</td>
+                <td class="px-4 py-2">{{ p.stock }}</td>
+                <td class="px-4 py-2 space-x-2">
+                  <a href="{% url 'editar_producto' p.id %}" class="text-yellow-600 hover:underline">Editar</a>
+                  |
+                  <a href="{% url 'eliminar_producto' p.id %}" class="text-red-600 hover:underline"
+                     onclick="return confirm('¿Estás seguro que deseas eliminar este producto?');">
+                    Eliminar
+                  </a>
+                </td>
+              </tr>
+            {% empty %}
+              <tr>
+                <td colspan="4" class="py-4 text-gray-500">No hay productos registrados.</td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>

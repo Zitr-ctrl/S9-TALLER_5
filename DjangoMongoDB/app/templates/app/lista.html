@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Lista de Productos</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+  <!-- Contenedor centrado -->
+  <div class="min-h-screen flex items-center justify-center">
+    <div class="bg-white p-8 rounded shadow-lg w-full max-w-4xl">
+
+      <h1 class="text-3xl font-bold mb-6 text-center">Listado de Productos</h1>
+
+      <div class="mb-4 text-center">
+        <a href="{% url 'crear_producto' %}" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition">
+          Crear Nuevo Producto
+        </a>
+      </div>
+
+      <div class="overflow-x-auto">
+        <table class="min-w-full table-auto border-collapse border border-gray-300">
+          <thead>
+            <tr class="bg-gray-200 text-left">
+              <th class="border border-gray-300 px-4 py-2">Nombre</th>
+              <th class="border border-gray-300 px-4 py-2">Descripción</th>
+              <th class="border border-gray-300 px-4 py-2">Stock</th>
+              <th class="border border-gray-300 px-4 py-2 text-center">Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for producto in productos %}
+              <tr class="hover:bg-gray-100">
+                <td class="border border-gray-300 px-4 py-2">{{ producto.nombre }}</td>
+                <td class="border border-gray-300 px-4 py-2">{{ producto.descripcion }}</td>
+                <td class="border border-gray-300 px-4 py-2">{{ producto.stock }}</td>
+                <td class="border border-gray-300 px-4 py-2 text-center space-x-2">
+                  <a href="{% url 'editar_producto' producto.id %}" class="bg-yellow-400 text-white px-3 py-1 rounded hover:bg-yellow-500">Editar</a>
+                  <a href="{% url 'eliminar_producto' producto.id %}" class="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600"
+                     onclick="return confirm('¿Estás seguro de que deseas eliminar este producto?');">
+                    Eliminar
+                  </a>
+                </td>
+              </tr>
+            {% empty %}
+              <tr>
+                <td colspan="4" class="text-center py-4 text-gray-500">No hay productos registrados.</td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>
