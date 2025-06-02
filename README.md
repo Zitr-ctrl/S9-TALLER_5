@@ -85,7 +85,7 @@ PUT http://localhost:3000/editar/1
 }
 
 DELETE http://localhost:3000/eliminar/1
-
+```
 📦 Dependencias:
 
     express, pg, ejs, body-parser
