@@ -69,28 +69,28 @@ body-parser ejs express method-override mongoose nodemon
 ## 🚀 Cómo ejecutar cada proyecto
 
 ### 🟩 Node.js + MongoDB
-cd node_mongodb
-npm install
-node server.js
+- cd node_mongodb
+- npm install
+- node server.js
 
 ### 🟦 Node.js + PostgreSQL
--cd node_postgresql
--npm install
--node index.js
+- cd node_postgresql
+- npm install
+- node index.js
 
 ### 🔵 Django + PostgreSQL
--cd django_postgresql
--pip install -r requirements.txt
--python manage.py migrate
--python manage.py runserver
+- cd django_postgresql
+- pip install -r requirements.txt
+- python manage.py migrate
+- python manage.py runserver
 
 ### 🟢 Django + MongoDB
--cd django_mongodb
--pip install -r requirements.txt
--Asegúrate de configurar mongoengine en settings.py
--python manage.py runserver
+- cd django_mongodb
+- pip install -r requirements.txt
+- Asegúrate de configurar mongoengine en settings.py
+- python manage.py runserver
 
-🧪 **Pruebas con Postman**:
+🧪 **Pruebas con Postman o Thunder Client (EJEMPLO)**:
 
 ```http
 POST http://localhost:3000/crear
