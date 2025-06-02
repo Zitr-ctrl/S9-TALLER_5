@@ -67,25 +67,6 @@ Todos los proyectos incluyen validaciones, vistas (EJS o HTML con Tailwind CSS),
 - `stock`: número entero positivo
 - JS en el frontend + validaciones en backend
 
-🧪 **Pruebas con Postman**:
-
-```http
-POST http://localhost:3000/crear
-{
-  "nombre": "Zapato",
-  "descripcion": "Calzado",
-  "stock": 15
-}
-
-PUT http://localhost:3000/editar/1
-{
-  "nombre": "Camisa",
-  "descripcion": "Ropa",
-  "stock": 10
-}
-
-DELETE http://localhost:3000/eliminar/1
-```
 📦 Dependencias:
 
 express, pg, ejs, body-parser
@@ -112,3 +93,24 @@ node server.js
 -pip install -r requirements.txt
 -Asegúrate de configurar mongoengine en settings.py
 -python manage.py runserver
+
+🧪 **Pruebas con Postman**:
+
+```http
+POST http://localhost:3000/crear
+{
+  "nombre": "Zapato",
+  "descripcion": "Calzado",
+  "stock": 15
+}
+
+PUT http://localhost:3000/editar/1
+{
+  "nombre": "Camisa",
+  "descripcion": "Ropa",
+  "stock": 10
+}
+
+DELETE http://localhost:3000/eliminar/1
+```
+
