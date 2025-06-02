@@ -24,7 +24,7 @@ Todos los proyectos incluyen validaciones, vistas (EJS o HTML con Tailwind CSS),
 
 ## 🧩 Proyectos Incluidos
 
-### 1. Django + PostgreSQL
+### 1. Django + PostgrSQL o MongoDB
 
 - ORM nativo de Django
 - Validaciones en `forms.py`
@@ -34,7 +34,7 @@ Todos los proyectos incluyen validaciones, vistas (EJS o HTML con Tailwind CSS),
 
 ---
 
-### 2. Django + MongoDB
+### 2. Django + MongoDB o PostgreSQL
 
 - Integración con MongoDB usando `mongoengine`
 - Modelos personalizados con validaciones propias
@@ -44,22 +44,26 @@ Todos los proyectos incluyen validaciones, vistas (EJS o HTML con Tailwind CSS),
 
 ---
 
-### 3. Node.js + PostgreSQL
+## 📦 Dependencias
 
-📄 **Estructura básica:**
-- `index.js`: rutas, validaciones, lógica del servidor
-- `db.js`: conexión a PostgreSQL
-- `views/`: vistas EJS (`crear.ejs`, `editar.ejs`, `lista.ejs`)
+### 🔵 Django + PostgreSQL 
+django psycopg2 
+
+### 🟢 Django + MongoDB  
+django mongoengine
+
+### 🟦 Node.js + PostgreSQL  
+body-parser ejs express nodemon pg
+
+###
+--- 🟩 Node.js + MongoDB 
+body-parser ejs express method-override mongoose nodemon
 
 🔍 **Validaciones:**
 - `nombre` y `descripción`: solo letras, longitud mínima
 - `stock`: número entero positivo
 - JS en el frontend + validaciones en backend
 
-📦 Dependencias:
-
-
-express, pg, ejs, body-parser
 
 ###🚀 Cómo ejecutar cada proyecto
 ###🟩 Node.js + MongoDB
