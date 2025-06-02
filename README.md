@@ -88,27 +88,27 @@ DELETE http://localhost:3000/eliminar/1
 ```
 📦 Dependencias:
 
-    express, pg, ejs, body-parser
+express, pg, ejs, body-parser
 
 ###🚀 Cómo ejecutar cada proyecto
-####🟩 Node.js + MongoDB
+###🟩 Node.js + MongoDB
 cd node_mongodb
 npm install
 node server.js
 
-####🟦 Node.js + PostgreSQL
+###🟦 Node.js + PostgreSQL
 cd node_postgresql
 npm install
 node index.js
 
-####🔵 Django + PostgreSQL
+###🔵 Django + PostgreSQL
 cd django_postgresql
 pip install -r requirements.txt
 python manage.py migrate
 python manage.py runserver
 
-####🟢 Django + MongoDB
+###🟢 Django + MongoDB
 cd django_mongodb
 pip install -r requirements.txt
-# Asegúrate de configurar mongoengine en settings.py
+Asegúrate de configurar mongoengine en settings.py
 python manage.py runserver
