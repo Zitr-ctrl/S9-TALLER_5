@@ -66,7 +66,8 @@ body-parser ejs express method-override mongoose nodemon
 - JS en el frontend + validaciones en backend
 
 --- 
-###🚀 Cómo ejecutar cada proyecto
+##🚀 Cómo ejecutar cada proyecto
+
 ###🟩 Node.js + MongoDB
 cd node_mongodb
 npm install
