@@ -22,17 +22,6 @@ Todos los proyectos incluyen validaciones, vistas (EJS o HTML con Tailwind CSS),
 
 ---
 
-## 📁 Estructura del Repositorio
-
-/crud-multi-tecnologia
-├── django_postgresql/
-├── django_mongodb/
-├── node_postgresql/
-└── node_mongodb/
-
-
----
-
 ## 🧩 Proyectos Incluidos
 
 ### 1. Django + PostgreSQL
@@ -68,6 +57,7 @@ Todos los proyectos incluyen validaciones, vistas (EJS o HTML con Tailwind CSS),
 - JS en el frontend + validaciones en backend
 
 📦 Dependencias:
+
 
 express, pg, ejs, body-parser
 
