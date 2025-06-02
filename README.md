@@ -66,25 +66,25 @@ body-parser ejs express method-override mongoose nodemon
 - JS en el frontend + validaciones en backend
 
 --- 
-##🚀 Cómo ejecutar cada proyecto
+## 🚀 Cómo ejecutar cada proyecto
 
-###🟩 Node.js + MongoDB
+### 🟩 Node.js + MongoDB
 cd node_mongodb
 npm install
 node server.js
 
-###🟦 Node.js + PostgreSQL
+### 🟦 Node.js + PostgreSQL
 -cd node_postgresql
 -npm install
 -node index.js
 
-###🔵 Django + PostgreSQL
+### 🔵 Django + PostgreSQL
 -cd django_postgresql
 -pip install -r requirements.txt
 -python manage.py migrate
 -python manage.py runserver
 
-###🟢 Django + MongoDB
+### 🟢 Django + MongoDB
 -cd django_mongodb
 -pip install -r requirements.txt
 -Asegúrate de configurar mongoengine en settings.py
